@@ -1,5 +1,5 @@
-import fastify, { FastifyInstance } from "fastify";
-import { Server, ServerResponse, IncomingMessage } from "http";
+import fastify, { FastifyInstance } from 'fastify';
+import { Server, ServerResponse, IncomingMessage } from 'http';
 
 const server: FastifyInstance<
   Server,
@@ -11,7 +11,7 @@ const server: FastifyInstance<
 
 const start: () => void = async () => {
   try {
-    await server.listen(3000, "0.0.0.0");
+    await server.listen(3001, '0.0.0.0');
   } catch (e) {
     server.log.error(e);
     process.exit(1);
