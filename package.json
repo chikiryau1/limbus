@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/chikiryau1/farm-bot#readme",
   "devDependencies": {
+    "@types/cors": "^2.8.9",
     "@types/node": "^14.14.21",
     "@typescript-eslint/eslint-plugin": "^4.13.0",
     "@typescript-eslint/parser": "^4.13.0",

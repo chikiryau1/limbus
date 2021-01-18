@@ -2217,6 +2217,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/cors@npm:^2.8.9":
+  version: 2.8.9
+  resolution: "@types/cors@npm:2.8.9"
+  checksum: 903e863c91928209c66a26fdd82ccd0327ed5cded60f19683a155b1b0281e0ad38ecf61dd9f6c23fb9a03ab684e6c2d5690e13473f96d813b8a474dc23dd6c89
+  languageName: node
+  linkType: hard
+
 "@types/eslint@npm:^7.2.4":
   version: 7.2.6
   resolution: "@types/eslint@npm:7.2.6"
@@ -6628,6 +6635,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "farm-bot@workspace:."
   dependencies:
+    "@types/cors": ^2.8.9
     "@types/node": ^14.14.21
     "@typescript-eslint/eslint-plugin": ^4.13.0
     "@typescript-eslint/parser": ^4.13.0
@@ -6714,10 +6722,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fastify-cors@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "fastify-cors@npm:5.1.0"
+  dependencies:
+    fastify-plugin: ^3.0.0
+    vary: ^1.1.2
+  checksum: f991f02fae7af6910aedacb471c4a249d5fc4bfe3e6f8c93d245e55a6006eeb0dfdac681d54ac50f062ec1f50bd8ba068f9ea96b19417ab602b369834917e58e
+  languageName: node
+  linkType: hard
+
 "fastify-error@npm:^0.3.0":
   version: 0.3.0
   resolution: "fastify-error@npm:0.3.0"
   checksum: 8b66bd0f3ed68d90b31e59dfee38e41fa4ab1d5206fc5675c8ec5d0ef65e37067d5305ff3a2e754b129212353b30bd5e78958c1446e909153116ffac86a2539e
+  languageName: node
+  linkType: hard
+
+"fastify-plugin@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "fastify-plugin@npm:3.0.0"
+  checksum: 201c30749b42e77e6159359ae436a56243dc2b920d2efab126b2b680f61d23251d51ee2334a7cbb9b30d8be13746983df8d5695828fb1e4495e4d1d325f66793
   languageName: node
   linkType: hard
 
@@ -13524,6 +13549,7 @@ resolve@1.18.1:
   resolution: "server@workspace:packages/server"
   dependencies:
     fastify: ^3.10.1
+    fastify-cors: ^5.1.0
     nodemon: ^2.0.7
     ts-node: ^9.1.1
   languageName: unknown
@@ -15257,7 +15283,7 @@ typescript@^4.1.3:
   languageName: node
   linkType: hard
 
-"vary@npm:~1.1.2":
+"vary@npm:^1.1.2, vary@npm:~1.1.2":
   version: 1.1.2
   resolution: "vary@npm:1.1.2"
   checksum: 591f059f727ac1ba0d97cb7767f8583a03fcbb07db7be2b7dce838ede520ec0e958a41cb19077054769077fdc49a9b9a2dc391c83426bfee89c054b8cc7404bf
