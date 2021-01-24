@@ -1,21 +1,19 @@
-import fastify, { FastifyInstance } from 'fastify';
-import { Server, ServerResponse, IncomingMessage } from 'http';
+import fastify from 'fastify';
 import cors from 'fastify-cors';
+import { ServerInstance } from 'types/server';
 
-const server: FastifyInstance<
-  Server,
-  IncomingMessage,
-  ServerResponse
-> = fastify({
+import { routes } from './routes';
+import { serverUtils } from './helpers/server';
+
+const server: ServerInstance = fastify({
   logger: true,
 });
 
-server.get('/ping', async (request, reply) => {
-  return { response: 'pong' }
-});
+const { registerRoutes } = serverUtils(server);
 
 const start: () => void = async () => {
   try {
+    registerRoutes(routes);
     // @ts-ignore
     await server.register(cors);
     await server.listen(3001, '0.0.0.0');
