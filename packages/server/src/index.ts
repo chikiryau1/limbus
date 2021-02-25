@@ -1,9 +1,11 @@
 import fastify from 'fastify';
 import cors from 'fastify-cors';
-import { ServerInstance } from 'types/server';
+import type { ServerInstance } from 'types/server';
 
 import { routes } from './routes';
 import { serverUtils } from './helpers/server';
+
+import { botStart } from './services';
 
 const server: ServerInstance = fastify({
   logger: true,
@@ -17,6 +19,7 @@ const start: () => void = async () => {
     // @ts-ignore
     await server.register(cors);
     await server.listen(3001, '0.0.0.0');
+    await botStart();
   } catch (e) {
     server.log.error(e);
     process.exit(1);

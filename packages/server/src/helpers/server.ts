@@ -1,4 +1,4 @@
-import { Route, ServerInstance } from 'types/server';
+import type { Route, ServerInstance } from 'types/server';
 
 type ServerUtils = { registerRoutes: (routes: Route[]) => void };
 

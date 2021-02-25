@@ -15,6 +15,7 @@
     "nodemon": "^2.0.7"
   },
   "dependencies": {
+    "@tinkoff/invest-openapi-js-sdk": "^1.2.16",
     "fastify": "^3.10.1",
     "fastify-cors": "^5.1.0",
     "ts-node": "^9.1.1"
