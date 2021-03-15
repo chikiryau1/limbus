@@ -29,3 +29,4 @@ yarn-error.log*
 /packages/*/build
 /packages/*/.eslintcache
 /packages/*/dist/**/*
+/packages/node_modules/
